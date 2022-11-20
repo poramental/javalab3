@@ -9,12 +9,28 @@
 </head>
 <body>
     
-    <form th:method="POST" action="/z1"class="form" >
+    <form method="POST" action="/z1" class="form" >
         <label for="reqstring">type here ur string</label>
-        <input class="reqstring" type="text" name="reqstring" id="reqstring" >
+        <input class="reqstring" type="text" id="reqstring" >
     <br>
         <input class="button" type="button" value="дабавить">
-        <input class="submit" type="button" value="отправить">
-    
+        <input class="submit" type="submit" value="отправить">
+    <br>
+        <textarea id="text" name="text" readonly rows="12" cols="36"></textarea>
+    </form>
+    <script>
+        let form = document.querySelector('.form')
+        let reqstring = form.querySelector('#reqstring')
+        let buttonAdd = form.querySelector('.button')
+        let buttonSubmit = form.querySelector('.submit')
+        let text = document.querySelector('#text')
+
+        buttonAdd.addEventListener('click', () => {
+            if (reqstring.value.length > 0) {
+                text.value += reqstring.value + '\n';
+                reqstring.value = '';
+            }
+        })
+    </script>
 </body>
 </html>
