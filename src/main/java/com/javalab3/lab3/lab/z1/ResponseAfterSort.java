@@ -14,6 +14,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ResponseAfterSort {
     
-    List<String> byLenth;
+    List<String> byLength;
     List<String> byCharCounts;
 }
