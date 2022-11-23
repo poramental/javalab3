@@ -18,14 +18,17 @@ public class StringListSorter {
 
     public static List<String> sortByCountsOfLowerChars(List<String> list){
         list.sort(StringByCountsOfLowerCharsComparator);
+        
         return list;
     }
 
     public static int countsOfLowerChars(String s){
         int count = 0;
-        for(char c : s.toCharArray()){
+        for(char c : s.strip().toCharArray()){
             if(Character.isLowerCase(c)) count++;
+            
         }
+        
         return count;
     }
 

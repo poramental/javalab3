@@ -35,8 +35,15 @@ public class Z1Controller {
         List<String> list = new ArrayList<>();
         for(int i = 0; i < _list.length; i++ ){
             list.add(_list[i]);
+            
         }
         ResponseAfterSort resp = new ResponseAfterSort();
+        for(String item : StringListSorter.sortByCountsOfLowerChars(list)){
+            System.out.println(item);
+        }
+        for(String item : StringListSorter.sortByLength(list)){
+            System.out.println(item);
+        }
         resp.setByCharCounts(StringListSorter.sortByCountsOfLowerChars(list));
         resp.setByLength(StringListSorter.sortByLength(list));
         model.addAttribute("resp", resp);
