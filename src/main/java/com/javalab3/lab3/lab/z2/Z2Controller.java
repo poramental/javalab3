@@ -23,8 +23,5 @@ public class Z2Controller {
         return "z2Resp";
     }
 
-    @GetMapping(value = "/z2Resp")
-    public String getZ2Resp(){
-        return "z2Resp";
-    }
+   
 }

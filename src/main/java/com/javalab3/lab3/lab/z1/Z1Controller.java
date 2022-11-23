@@ -29,8 +29,7 @@ public class Z1Controller {
 
     @PostMapping(value="/z1")
     public String Z1post(@RequestParam("reqstring") String string, Model model) {
-        // RequestList reqList = new RequestList();
-        // model.addAttribute("requestList", reqList);
+        
         
         String[] _list = string.split("\n");
         List<String> list = new ArrayList<>();
@@ -45,9 +44,5 @@ public class Z1Controller {
     }
     
 
-    @GetMapping(value = "/z1Resp")
-    public String z1Resp(){
-        return "z1Resp";
-    }
     
 }
