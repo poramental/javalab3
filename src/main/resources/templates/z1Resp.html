@@ -9,19 +9,19 @@
 <body>
     <h1> Ваши Ответы:</h1>
     <h2>    По длине слова.</h2>
-    <ul>
+    <ol>
         
         <li th:each="s : ${resp.byLength}">
             <p th:text="${s}"></p>
         </li>
-    </ul>
+    </ol>
     
     <h2>    По количеству маленьких символов.</h2>
-    <ul>
+    <ol>
         
         <li th:each="s : ${resp.byCharCounts}">
             <p th:text="${s}"></p>
         </li>
-    </ul>
+    </ol>
 </body>
 </html>

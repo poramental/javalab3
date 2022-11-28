@@ -1,5 +1,6 @@
 package com.javalab3.lab3.lab.z1;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -12,14 +13,17 @@ public class StringListSorter {
     
     
     public static List<String> sortByLength(List<String> list) {
-        list.sort(StringByLengthComparator);
-        return list;
+        List<String> r_list = new ArrayList<>(list);
+        
+        r_list.sort(StringByLengthComparator);
+        return r_list;
     }
 
     public static List<String> sortByCountsOfLowerChars(List<String> list){
-        list.sort(StringByCountsOfLowerCharsComparator);
+        List<String> r_list = new ArrayList<>(list);
+        r_list.sort(StringByCountsOfLowerCharsComparator);
         
-        return list;
+        return r_list;
     }
 
     public static int countsOfLowerChars(String s){
